@@ -13,11 +13,17 @@
   font-weight: 600;
 }
 
+.navbar nav {
+  display: flex;
+  align-items: center;
+}
+
 .navbar .search-box {
   display: flex;
   align-items: center;
   height: 32px;
   border: 1px solid black;
+  margin-right: 1rem;
 }
 
 .navbar .search-box input {
@@ -34,4 +40,8 @@
   color: white;
   border: none;
   font-size: 18px;
+}
+
+.navbar nav a {
+  font-size: 1rem;
 }

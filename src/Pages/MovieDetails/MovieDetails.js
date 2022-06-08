@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { addToDb } from "../../utilities/addToDb";
 import "./MovieDetails.css";
 
 const MovieDetails = () => {
   const { title } = useParams();
   const [movie, setMovie] = useState({});
+  const [marked, setMarked] = useState([]);
+
   useEffect(() => {
     fetch(`https://wookie.codesubmit.io/movies?q=${title}`, {
       headers: {
@@ -14,8 +17,9 @@ const MovieDetails = () => {
       .then((res) => res.json())
       .then((data) => setMovie(data.movies[0]));
   }, [title]);
-  console.log(movie);
+
   const {
+      id,
     backdrop,
     cast,
     length,
@@ -29,6 +33,14 @@ const MovieDetails = () => {
   const directors = director > 0 ? director?.join(",") : director;
   const casts = cast ? cast?.join(",") : '';
   const year = released_on ? released_on?.split("-")[0] : '';
+
+  const handleAddToBookmarks = (markedMovie) => {
+      let newMarked = [];
+      newMarked = [...marked, markedMovie];
+      setMarked(newMarked);
+      addToDb(markedMovie);
+  }
+
   return (
     <div className="movie-details">
       <div className="poster">
@@ -55,6 +67,9 @@ const MovieDetails = () => {
             <p>
                 {overview}
             </p>
+        </div>
+        <div>
+            <button onClick={() => handleAddToBookmarks(id)}>Add to bookmark</button>
         </div>
       </div>
     </div>

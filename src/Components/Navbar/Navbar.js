@@ -10,10 +10,14 @@ const Navbar = () => {
                     <br />
                     Movies
                 </Link>
-            <div className='search-box'>
+           <nav>
+           <div className='search-box'>
                 <button>search</button>
                 <input type="text" />
             </div>
+            <Link to='/bookmark'>Bookmarks</Link>
+           </nav>
+
         </header>
     );
 };
