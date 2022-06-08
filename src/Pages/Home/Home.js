@@ -21,7 +21,7 @@ const Home = () => {
   
   return (
     <>
-      <Navbar />
+ 
       <main className="main">
         <div>
           <h1 className="genre-title">Action</h1>
