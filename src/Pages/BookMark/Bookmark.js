@@ -3,6 +3,7 @@ import MovieCard from "../../Components/MovieCard/MovieCard";
 import "./Bookmark.css";
 
 const Bookmark = () => {
+    // fetch all movies
   const [movies, setMovies] = useState([]);
   const [markedMovies, setMarkedMovies] = useState([]);
   useEffect(() => {
@@ -15,6 +16,7 @@ const Bookmark = () => {
       .then((data) => setMovies(data.movies));
   }, []);
 
+  // get all bookmarked movies from local storage
   useEffect(() => {
     const marked = JSON.parse(localStorage.getItem("bookmarks"));
     if (marked) {

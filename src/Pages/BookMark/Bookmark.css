@@ -3,7 +3,8 @@
   margin: 3rem auto;
 }
 
-.bookmarked-wrapper .bookmarked-movies {
+.bookmarked-wrapper .bookmarked-movies,
+.search-result-wrapper .search-result {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 1.5rem 0;

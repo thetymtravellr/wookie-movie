@@ -3,7 +3,9 @@
   padding: 0 40px;
   margin: auto;
 }
-
+.search-result {
+  text-align: center;
+}
 .swiper-slider-style {
   padding-left: 60px;
 }

@@ -1,8 +1,8 @@
-// use local storage to manage cart data
+// use local storage to manage bookmarked movies
 const addToDb = (id) => {
   let marked = {};
 
-  //get the shopping cart from local storage
+  //get bookmarked movie from local storage
   const bookmarked = localStorage.getItem("bookmarks");
   if (bookmarked) {
     marked = JSON.parse(bookmarked);
@@ -19,6 +19,8 @@ const addToDb = (id) => {
 };
 
 const removeFromDb = (id) => {
+
+  //remove bookmarked movie from local storage
   let value = id;
   let marked = JSON.parse(localStorage.getItem("bookmarks"));
 
@@ -27,7 +29,8 @@ const removeFromDb = (id) => {
   bookmarked = bookmarked.filter((item) => item !== value);
 
   marked['id'] = bookmarked
-
+  
+  //set bookmarks local storage
   localStorage.setItem("bookmarks", JSON.stringify(marked));
 };
 
