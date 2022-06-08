@@ -75,7 +75,7 @@ const Home = () => {
             >
               {actionMovies.map((movie) => (
                 <SwiperSlide className="swiper-slider">
-                  <MovieCard key={movie.id} movie={movie} />
+                  <MovieCard key={movie?.id} movie={movie} />
                 </SwiperSlide>
               ))}
             </Swiper>
