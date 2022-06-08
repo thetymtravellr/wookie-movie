@@ -4,7 +4,6 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
 import MovieCard from "../../Components/MovieCard/MovieCard";
-import Navbar from "../../Components/Navbar/Navbar";
 import "./Home.css";
 
 const Home = () => {
@@ -30,6 +29,7 @@ const Home = () => {
             className="swiper-slider-style"
               spaceBetween={40}
               slidesPerView={1}
+              slidesPerGroup={1}
               navigation
               modules={[Navigation,Autoplay]}
               autoplay={{
@@ -37,26 +37,35 @@ const Home = () => {
                 disableOnInteraction: false,
               }}
               breakpoints={{
-                640: {
-                  slidesPerView: 1,
+                550: {
+                  slidesPerView: 2,
+                  slidesPerGroup:1,
                   spaceBetween: 20,
                 },
                 768: {
-                  slidesPerView: 2,
+                  slidesPerView: 3,
+                  slidesPerGroup:2,
                   spaceBetween: 10,
                 },
-                1070: {
-                    slidesPerView: 3,
+                940: {
+                    slidesPerView: 4,
+                    slidesPerGroup:3,
                     spaceBetween: 50,
                   },
-                1400: {
-                  slidesPerView: 4,
+                1150: {
+                  slidesPerView: 5,
+                  slidesPerGroup:4,
                   spaceBetween: 50,
                 },
+                1300: {
+                    slidesPerView: 6,
+                    slidesPerGroup:5,
+                    spaceBetween: 50,
+                  },
               }}
             >
               {movies.map((movie) => (
-                <SwiperSlide>
+                <SwiperSlide className="swiper-slider">
                   <MovieCard 
                   key={movie.id} 
                   movie={movie}/>
@@ -72,6 +81,7 @@ const Home = () => {
             className="swiper-slider-style"
               spaceBetween={40}
               slidesPerView={1}
+              slidesPerGroup={1}
               navigation
               modules={[Navigation,Autoplay]}
               autoplay={{
@@ -79,26 +89,35 @@ const Home = () => {
                 disableOnInteraction: false,
               }}
               breakpoints={{
-                640: {
-                  slidesPerView: 1,
+                550: {
+                  slidesPerView: 2,
+                  slidesPerGroup:1,
                   spaceBetween: 20,
                 },
                 768: {
-                  slidesPerView: 2,
+                  slidesPerView: 3,
+                  slidesPerGroup:2,
                   spaceBetween: 10,
                 },
-                1070: {
-                    slidesPerView: 3,
+                940: {
+                    slidesPerView: 4,
+                    slidesPerGroup:3,
                     spaceBetween: 50,
                   },
-                1400: {
-                  slidesPerView: 4,
+                1150: {
+                  slidesPerView: 5,
+                  slidesPerGroup:4,
                   spaceBetween: 50,
                 },
+                1300: {
+                    slidesPerView: 6,
+                    slidesPerGroup:5,
+                    spaceBetween: 50,
+                  },
               }}
             >
               {movies.map((movie) => (
-                <SwiperSlide>
+                <SwiperSlide className="swiper-slider">
                   <MovieCard 
                   key={movie.id} 
                   movie={movie}/>
@@ -114,6 +133,7 @@ const Home = () => {
             className="swiper-slider-style"
               spaceBetween={40}
               slidesPerView={1}
+              slidesPerGroup={1}
               navigation
               modules={[Navigation,Autoplay]}
               autoplay={{
@@ -121,26 +141,35 @@ const Home = () => {
                 disableOnInteraction: false,
               }}
               breakpoints={{
-                640: {
-                  slidesPerView: 1,
+                550: {
+                  slidesPerView: 2,
+                  slidesPerGroup:1,
                   spaceBetween: 20,
                 },
                 768: {
-                  slidesPerView: 2,
+                  slidesPerView: 3,
+                  slidesPerGroup:2,
                   spaceBetween: 10,
                 },
-                1070: {
-                    slidesPerView: 3,
+                940: {
+                    slidesPerView: 4,
+                    slidesPerGroup:3,
                     spaceBetween: 50,
                   },
-                1400: {
-                  slidesPerView: 4,
+                1150: {
+                  slidesPerView: 5,
+                  slidesPerGroup:4,
                   spaceBetween: 50,
                 },
+                1300: {
+                    slidesPerView: 6,
+                    slidesPerGroup:5,
+                    spaceBetween: 50,
+                  },
               }}
             >
               {movies.map((movie) => (
-                <SwiperSlide>
+                <SwiperSlide className="swiper-slider">
                   <MovieCard 
                   key={movie.id} 
                   movie={movie}/>

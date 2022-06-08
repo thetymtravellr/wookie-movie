@@ -1,6 +1,6 @@
 .movie-card {
-  width: 320px;
-  height: 200px;
+  width: 200px;
+  height: 320px;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -8,6 +8,8 @@
   justify-content: center;
   position: relative;
   overflow: hidden;
+  margin: auto;
+  border: 2px solid red;
 }
 
 .movie-card .movie-thumbnail {
@@ -21,25 +23,25 @@
   transform: scale(1.1);
 }
 
-.movie-card .movie-info {
+/* .movie-card .movie-info {
   position: absolute;
   bottom: 0;
   height: 100px;
   width: 100%;
   color: white;
   z-index: 2;
-}
+} */
 
-.movie-card .movie-info h2,
+/* .movie-card .movie-info h2,
 .movie-card .movie-info p {
   margin: 0;
   padding-left: 10px;
-}
+} */
 
-.card-gredient {
+/* .card-gredient {
   position: absolute;
   height: 100%;
   width: 100%;
   background: linear-gradient(to bottom, transparent, black);
   z-index: 1;
-}
+} */

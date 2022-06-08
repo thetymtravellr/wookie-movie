@@ -1,0 +1,13 @@
+.movie-details {
+  max-width: 1300px;
+  margin: 3.5rem auto;
+  display: flex;
+  padding: 0 2rem;
+}
+
+.poster {
+  margin-right: 4rem;
+}
+.rating {
+  margin-left: 1rem;
+}

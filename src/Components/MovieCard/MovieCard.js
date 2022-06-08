@@ -3,18 +3,11 @@ import { Link } from "react-router-dom";
 import "./MovieCard.css";
 
 const MovieCard = ({ movie }) => {
-  const { title, backdrop, imdb_rating } = movie;
+  const { title, poster } = movie;
   return (
    <Link to={`movie/${title}`}>
     <div className="movie-card">
-      <img className="movie-thumbnail" src={backdrop} alt="" />
-      <div className="movie-info">
-          <h2>{title}</h2>
-          <p>
-              {imdb_rating}
-          </p>
-      </div>
-      <div className="card-gredient"></div>
+      <img className="movie-thumbnail" src={poster} alt="" />
     </div>
    </Link>
   );
