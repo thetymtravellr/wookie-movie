@@ -29,12 +29,30 @@ const Home = () => {
             <Swiper
             className="swiper-slider-style"
               spaceBetween={40}
-              slidesPerView={2}
+              slidesPerView={1}
               navigation
               modules={[Navigation,Autoplay]}
               autoplay={{
                 delay: 4500,
-                disableOnInteraction: true,
+                disableOnInteraction: false,
+              }}
+              breakpoints={{
+                640: {
+                  slidesPerView: 1,
+                  spaceBetween: 20,
+                },
+                768: {
+                  slidesPerView: 2,
+                  spaceBetween: 10,
+                },
+                1070: {
+                    slidesPerView: 3,
+                    spaceBetween: 50,
+                  },
+                1400: {
+                  slidesPerView: 4,
+                  spaceBetween: 50,
+                },
               }}
             >
               {movies.map((movie) => (
@@ -53,12 +71,30 @@ const Home = () => {
             <Swiper
             className="swiper-slider-style"
               spaceBetween={40}
-              slidesPerView={2}
+              slidesPerView={1}
               navigation
               modules={[Navigation,Autoplay]}
               autoplay={{
                 delay: 4500,
-                disableOnInteraction: true,
+                disableOnInteraction: false,
+              }}
+              breakpoints={{
+                640: {
+                  slidesPerView: 1,
+                  spaceBetween: 20,
+                },
+                768: {
+                  slidesPerView: 2,
+                  spaceBetween: 10,
+                },
+                1070: {
+                    slidesPerView: 3,
+                    spaceBetween: 50,
+                  },
+                1400: {
+                  slidesPerView: 4,
+                  spaceBetween: 50,
+                },
               }}
             >
               {movies.map((movie) => (
@@ -77,12 +113,30 @@ const Home = () => {
             <Swiper
             className="swiper-slider-style"
               spaceBetween={40}
-              slidesPerView={2}
+              slidesPerView={1}
               navigation
               modules={[Navigation,Autoplay]}
               autoplay={{
                 delay: 4500,
-                disableOnInteraction: true,
+                disableOnInteraction: false,
+              }}
+              breakpoints={{
+                640: {
+                  slidesPerView: 1,
+                  spaceBetween: 20,
+                },
+                768: {
+                  slidesPerView: 2,
+                  spaceBetween: 10,
+                },
+                1070: {
+                    slidesPerView: 3,
+                    spaceBetween: 50,
+                  },
+                1400: {
+                  slidesPerView: 4,
+                  spaceBetween: 50,
+                },
               }}
             >
               {movies.map((movie) => (
